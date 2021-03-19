@@ -1,6 +1,16 @@
 // Assignment code here
-
-
+var blankString = "";
+var characters = [
+  "!",
+  "@",
+  "#",
+  "$",
+  "%",
+  "&",
+  "*",
+  "?",
+  "."
+]
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -14,13 +24,25 @@ function writePassword() {
 
 }
 function generatePassword() {
-  window.prompt("How many characters would you like your password to be? Password must be between 8 and 128 characters.");
-  if (prompt>8 || prompt<128) {
+  
+  characters = prompt("How many characters would you like your password to be? Password must be between 8 and 128 characters.");
+  if (characters>8 && characters<128) {
+    
+    
+    specialCharacters();
+    console.log("right")
     
   }
   else {
-    alert("You must choose between 8 and 128 characters.")
-  };
+    prompt("You must choose valid characters!");
+    generatePassword();
+  }
+}
+function specialCharacters() {
+  special = prompt("Which special characters would you like to add You can use '!@#$%&*?.'");
+  if (special === characters) {
+    console.log("correct");
+  }
 }
 
 // Add event listener to generate button
