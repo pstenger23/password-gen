@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%&*?abcdefghijklmnopqrstuvwxyz1234567890"
-var lowerSpecial = "abcdefghijklmnopqrstuvwxyz!@#$%&*?1234567890"
+var charset = "ABCDEFGH5IJKLMN!OPQR$STUV&WXYZ%*?abcde78fghijk@lm#nop2q9rstuvwxyz13460"
+//var lowerSpecial = "abcdefghijklmnopqrstuvwxyz!@#$%&*?1234567890"
 var capSpecial = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%&*?1234567890"
 var capOnly = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var noSpecial = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -34,7 +34,7 @@ generatePassword = function() {
     }
     if(upperLower && !specialConfirm){
       for(var i=0; i<numberOf; i++){
-        generated += capSpecial.charAt(Math.floor(Math.random() * numberOf))
+        generated += noSpecial.charAt(Math.floor(Math.random() * numberOf))
         console.log(generated);
       }
     }
